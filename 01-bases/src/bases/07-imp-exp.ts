@@ -1,0 +1,13 @@
+import heroes, { owners, type Owner } from "../data/heroes";
+
+
+export const getHeroById = (id: number) => {
+    return heroes.find(hero => hero.id === id) ?? {};
+}
+
+export const getHeroesByOwner = (owner: Owner) =>{
+    return heroes.filter(hero => hero.owner === owner)
+}
+
+//console.log(getHeroById(111));
+console.log(getHeroesByOwner('Marvel'))
