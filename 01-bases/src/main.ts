@@ -10,7 +10,9 @@ import { setupCounter } from './counter.ts'
 //import './bases/04-functions.ts'
 // import './bases/06-desde-arr.ts'
 //import './bases/07-imp-exp.ts'
-import './bases/08-promises.ts'
+//import './bases/08-promises.ts'
+//import './bases/09-fetch-api.ts'
+//import './bases/10-axios.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
