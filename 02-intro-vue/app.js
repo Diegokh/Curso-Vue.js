@@ -13,8 +13,9 @@ const app = createApp({
 
     setup(){
 
-        const showAuthor = ref(true);
+        const showAuthor = ref(false);
         const quotes = ref(originalQuotes)
+        const newMessage = ref('')
 
         const totalQuotes = computed(() => {
             return quotes.value.length;
@@ -25,12 +26,15 @@ const app = createApp({
         }
 
         const addQuote = () =>{
-            quotes.value.unshift({quote: 'Hola Mundo', author: 'Diego Blanque'})
+            quotes.value.unshift({quote: newMessage.value, author: 'Diego Blanque'})
+
+            newMessage.value = ''
         }
 
         return{
             quotes,
             showAuthor,
+            newMessage,
             toggleAuthor,
             addQuote,
             totalQuotes,
